@@ -1,0 +1,110 @@
+marquee {
+    font-family: 'TommyMEDIUM', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+#marq_case {
+    background: rgb(238, 238, 238);
+    display: flex;
+    margin: auto;
+    padding: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid;
+    border-color: rgb(0, 0, 0);
+}
+
+#titleANDmarq {
+    display: flex;
+    flex-direction: column;
+}
+
+#titre {
+    text-align: center;
+    font-family: 'TommyBOLD', Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    margin: auto;
+    padding: auto;
+    flex: auto;
+    background-color: white;
+    border-bottom: 3px solid;
+    width: 100%;
+    margin-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: TommyBOLD;
+    src: url(/fonts/bold.otf);
+    font-weight: bold;
+  }
+
+@font-face {
+    font-family: TommyBLACK;
+    src: url(/fonts/black.otf);
+}  
+
+@font-face {
+    font-family: TommyMEDIUM;
+    src: url(/fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf);
+    font-weight: Medium;
+}
+
+@font-face {
+    font-family: TommyTHIN;
+    src: url(/fonts/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf);
+    font-weight: Thin;
+}  
+
+@font-face {
+    font-family: TommyREGULAR;
+    src: url(/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
+    font-weight: Regular;
+}  
+
+@font-face {
+    font-family: TommyEXTRA;
+    src: url(/fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf);
+}  
+
+.menu {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    max-width: 720px;
+    margin: 10 auto;
+    height: 100vh;
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  letter-spacing: 1.1px;
+}
+
+body,
+html {
+  height: 100%;
+  background: #f0f3ff;
+  font-family: "TommyREGULAR", sans-serif;
+}
+
+.menu li {
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
