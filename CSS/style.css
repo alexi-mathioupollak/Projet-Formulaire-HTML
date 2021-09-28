@@ -14,24 +14,47 @@
     margin-left: 1%;
 }
 
-.nav {
+.navbar {
     position: relative;
     margin-right: 1%;
     z-index: 99; 
     padding: auto;
+    justify-content: space-between;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 1.5rem;
+    font-size: 19x;
+}
+
+.menu a:hover {
+    color: black;
 }
 
 .menu li {
     display: inline;
     list-style: none;
-    border: 1px solid black;
     border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 15px;
+}
+
+.menu li:hover {
+    background-color: white;
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
-    background-color:  yellow;
     height: 50px;
     width: 850px;
     margin-right: 10px;
