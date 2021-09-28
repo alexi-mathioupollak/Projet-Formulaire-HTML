@@ -1,0 +1,16 @@
+
+Information pour la manipulation de branche sur git :
+Tutoriel
+
+- Pour créer une branche, il suffit de faire "git branch <le nom>"
+
+- Pour changer de branche (se déplacer), c'est "git checkout <le nom>"
+Exemple : pour aller sur la branche "main" : "git checkout main"
+
+-,Quand tu es sur "main" disons, et tu veux combiner les changements de ta branche avec "main"
+Tu fais "git merge <nom de la branche>"
+
+Exemple: tu es sur main, tu fais "git merge <mabranche>", ça fusionnera "mabranche" dans "main"
+(et non l'inverse attention)
+
+Exemple :  t'es dans "branche1", et tu fais un "git merge <branche2>" ça va fusionner les éléments de "branche2" dans "branche1"
