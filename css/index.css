@@ -1,0 +1,9 @@
+.bloc {
+    border: solid;
+    width: 50%;
+}
+
+.droppable {
+    display: flex;
+    border-color: blue;
+}
