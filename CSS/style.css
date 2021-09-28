@@ -1,11 +1,27 @@
+html {
+    box-sizing: border-box;
+    background: rgb(241, 241, 241);
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "TommyREGULAR", sans-serif;
+}
+
 #titre_et_nav {
     font-family: 'TommyBOLD', Arial, Helvetica, sans-serif;
     font-size: 16px;
     background-color: rgb(255, 254, 247);
-    padding: 1px;
+    padding: auto;
+    margin-top: 0;
     border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
 }
 
 #titre_principal {
@@ -53,7 +69,7 @@
 }
 
 .menu li:hover {
-    background-color: white;
+    background-color: rgb(255, 254, 247);
 }
 
 .menu {
@@ -67,6 +83,84 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+.cases {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.cases_c {
+    flex-direction: column;
+    font-size: 23px;
+    text-align: center;
+}
+
+.cases_d {
+    flex-direction: column;
+    font-size: 23px;
+    text-align: center;
+}
+
+.box_c {
+    border: 1px solid black;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 500px;
+    height: 700px;
+    background: white;
+}
+
+.box_d {
+    border: 1px solid black;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 500px;
+    height: 700px;
+    background: white;
+}
+
+.case_html {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.box_html {
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 1300px;
+    height: 700px;
+    background: white;
+    margin-left: 300px;
+
+}
+
+#draggable {
+    border-radius: 10px;
+    border-color: black;
+}
+
+#draggable .ui-selecting {
+    background: red;
+}
+
+#draggable .ui-selected {
+    background: black;
+    color: white;
+}
+
+#draggable .ui-widget-content {
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1.4em;
+    height: 18px;
+}
+
+.html {
+    display: flex;
+    flex-direction: column;
 }
 
 @font-face {
@@ -102,17 +196,6 @@ body {
     font-family: TommyEXTRA;
     src: url(/fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf);
 }  
-
-html {
-    box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  background: #f0f3ff;
-  font-family: "TommyREGULAR", sans-serif;
-}
 
 @keyframes fadeIn {
     From {
