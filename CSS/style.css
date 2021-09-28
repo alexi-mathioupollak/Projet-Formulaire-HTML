@@ -1,11 +1,11 @@
 html {
     box-sizing: border-box;
+    background: rgb(241, 241, 241);
 }
 
 body,
 html {
   height: 100%;
-  background-color: rgb(245, 241, 229);
   font-family: "TommyREGULAR", sans-serif;
 }
 
@@ -134,7 +134,28 @@ body {
     height: 700px;
     background: white;
     margin-left: 300px;
-    text-align: center;
+
+}
+
+#draggable {
+    border-radius: 10px;
+    border-color: black;
+}
+
+#draggable .ui-selecting {
+    background: red;
+}
+
+#draggable .ui-selected {
+    background: black;
+    color: white;
+}
+
+#draggable .ui-widget-content {
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1.4em;
+    height: 18px;
 }
 
 .html {

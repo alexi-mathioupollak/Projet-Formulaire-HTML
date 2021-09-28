@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <title>Générateur Formulaire HTML</title>
         <link rel="stylesheet" href="CSS/style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="JS/script.js"></script>
     </head>    
     <header>
             <div id="titre_et_nav">
@@ -26,7 +30,11 @@
         <div class="cases">
             <div class="cases_c">
                 <div class="case_c"><strong>Choisissez</strong> un élément</div>
-                <div class="box_c">Boite CLIQUEZ</div>
+                <div class="box_c">
+                    <div id="draggable" class="ui-widget-content">
+                        <p>Drag me around</p>
+                      </div>
+                </div>
             </div>
             <div class="cases_d">
                 <div class="case_d"><strong>Déposez</strong> votre élément</div>
@@ -35,7 +43,7 @@
         </div>
         <div class="html">
             <div class="case_html">Code HTML : </div>
-            <div class="box_html">box HTML</div>
+            <textarea rows="5" cols="30" class="box_html"></textarea>
         </div>
 
     </body>
