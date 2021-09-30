@@ -22,6 +22,7 @@ html {
     top: 0px;
     right: 0px;
     left: 0px;
+    z-index: 99;
 }
 
 #titre_principal {
@@ -112,7 +113,7 @@ body {
     background: white;
 }
 
-.box_d {
+#box_d {
     border: 1px solid black;
     margin-top: 40px;
     border-radius: 10px;
@@ -140,27 +141,36 @@ body {
 #draggable {
     border-radius: 10px;
     border-color: black;
+    user-select: none;
 }
 
-#draggable .ui-selecting {
-    background: red;
+#draggable2 {
+    border-radius: 10px;
+    border-color: black;
+    user-select: none;
 }
 
-#draggable .ui-selected {
-    background: black;
-    color: white;
+#draggable3 {
+    border-radius: 10px;
+    border-color: black;
+    user-select: none;
 }
 
-#draggable .ui-widget-content {
-    margin: 3px;
-    padding: 0.4em;
-    font-size: 1.4em;
-    height: 18px;
+#droppable { 
+    border: 1px solid black;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 500px;
+    height: 700px;
 }
 
 .html {
     display: flex;
     flex-direction: column;
+}
+
+#droppable .ui-state-active {
+    width: 300px;
 }
 
 @font-face {

@@ -8,8 +8,9 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="JS/script.js"></script>
+       <!-- script src="JS/script.js"></script> -->
     </head>    
+    <main>
     <header>
             <div id="titre_et_nav">
                 <h1 id="titre_principal" data-item='titre'>Générateur de Formulaire HTML</h1>
@@ -18,7 +19,7 @@
                 <nav class="navbar">
                     <ul class="menu">
                         <li><a href="#">ACCUEIL</a></li>
-                        <li><a href="#">MENU 1</a></li>
+                        <li><a href="pageTest.html">PAGE DE TEST</a></li>
                         <li><a href="#">MENU 2</a></li>
                         <li><a href="#">MENU 3</a></li>
                     </ul>
@@ -31,22 +32,52 @@
             <div class="cases_c">
                 <div class="case_c"><strong>Choisissez</strong> un élément</div>
                 <div class="box_c">
+                    <script>
+                        $( function() {
+                            $( "#draggable" ).draggable({revert: "invalid"}).sortable();
+                            $( "#draggable2" ).draggable({revert: "invalid"}).sortable();
+                            $( "#draggable3" ).draggable({revert: "invalid"}).sortable();
+                            $( "#draggable" ).disableSelection();
+                            $( "#droppable" ).droppable({
+                                classes: {
+                                    "ui-droppable-active": "ui-state-active",
+                                    "ui-droppable-hover": "ui-state-hover",
+                                },
+                            drop: function( event, ui ) {
+                                $( this )
+                                .addClass( "ui-state-highlight" )
+                                .find( "p" )
+                                    .html( "Zbeub" );
+                            }
+                            });
+                        } );
+                    </script>
                     <div id="draggable" class="ui-widget-content">
-                        <p>Drag me around</p>
-                      </div>
+                        <p>Case 1</p>
+                    </div>
+                    <div id="draggable2" class="ui-widget-content">
+                        <p>Case 2</p>
+                    </div>
+                    <div id="draggable3" class="ui-widget-content">
+                        <p>Case 3</p>
+                    </div>
                 </div>
             </div>
             <div class="cases_d">
                 <div class="case_d"><strong>Déposez</strong> votre élément</div>
-                <div class="box_d">boite DEPOSEZ</div>
+                <div id="droppable" class="ui-widget-header">boite DEPOSEZ</div>
             </div>
         </div>
         <div class="html">
             <div class="case_html">Code HTML : </div>
             <textarea rows="5" cols="30" class="box_html"></textarea>
         </div>
-
     </body>
+    </main>
+    <footer>
+            
+        </div>
+    </footer>
 
 
 </html>
