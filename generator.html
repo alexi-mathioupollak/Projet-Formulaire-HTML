@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<DOCTYPE html xmlns="http://www.w3.org/1999/html">
     <html>
     <head>
         <meta charset="utf-8">
@@ -6,9 +6,9 @@
         <link rel="stylesheet" href="CSS/navbar.css">
         <link rel="stylesheet" href="CSS/footer.css">
         <link rel="stylesheet" href="CSS/main.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="CSS/generator.css">
         <script src="JS/script.js"></script>
+        <script src="JS/HTMLboxscript.js"></script>
     </head>
     <main>
         <header>
@@ -31,16 +31,57 @@
         </header>
         <body>
 
-        <section class="boxes">
-            <div class="box_drag">
-                <ul class="form_list">
-                    <li>boite1</li>
-                    <li>boite2</li>
-                    <li>boite3</li>
-                </ul>
-            </div>
-            <div class="box_drop">
-            </div>
+        <section class="first_bloc">
+            <h1 class="body_title">GENERATOR PAGE</h1>
+            <article class="whoarewe">
+                <h2>How to use ?</h2>
+                <p>Simply hold down a block in the "Drag" section, drag it to the "Drop" section, and you will see that your HTML code has appeared in the "HTML code" block.</p>
+            </article>
+        </section>
+        <section class="body_generator">
+            <div class="bande"></div>
+            <h1>DRAG & DROP SECTION</h1>
+            <p>Do not hesitate to ask us for help in the "CONTACT US"
+                section.
+                <a class="contactus_link" href="contactus.html">CLICK HERE</a>
+                to be redirected to the page.</p>
+            <section class="boxes">
+                <div class="box_drag">
+                    <h1 class="drag_title">DRAG SECTION</h1>
+                    <ul class="form_list">
+                        <li class="b1" draggable="true">boite1</li>
+                        <li class="b2" draggable="true">boite2</li>
+                        <li class="b3" draggable="true">boite3</li>
+                    </ul>
+                </div>
+                <img src="img/arrow.png" class="arrow"></img>
+                <div class="box_drop">
+                    <h1 class="drop_title">DROP SECTION</h1>
+                        <ul class="receive_list">
+
+                        </ul>
+                </div>
+            </section>
+            <section class="html_box_principal">
+                <h1 class="html_title">HTML CODE SECTION</h1>
+                <textarea class="html_box_code" minlength="1000" contenteditable="true" readonly>
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <titleThanks for using FRAJ-Form!</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <script src="JS/script.js"></script>
+    </head>
+    <body>
+          <p>Hey! i'm an example</p>
+    </body>
+    <footer>
+          <p>Copyright - FRAJ-Form</p>
+    </footer>
+</html>
+                </textarea>
+            </section>
         </section>
         </body>
 
