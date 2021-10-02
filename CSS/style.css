@@ -23,26 +23,30 @@ html {
     right: 0px;
     left: 0px;
     z-index: 99;
+    align-items: center;
 }
 
 
 /* ----- Titre ----- */
 
 
-#titre_principal {
-    display: flex;
-    margin-left: 10px;
-    user-select: none;
-    position: relative;
+.princ_title {
     transition: transform 0.5s, font-size 0.5s ease;
-    text-shadow: 1px 1px 1px black;
+    font-size: 16px;
 }
 
-#titre_principal:hover{
-    font-size: 40px;
+.princ_title:hover{
+    font-size: 20px;
     transform: rotate(360deg);
 }
 
+
+
+#titre_principal {
+    user-select: none;
+    position: relative;
+    text-shadow: 1px 1px 1px black;
+}
 
 
 /* ----- Menu navigation ----- */
@@ -50,9 +54,7 @@ html {
 
 .navbar {
     position: relative;
-    margin-right: 1%;
-    z-index: 99; 
-    padding: auto;
+    z-index: 99;
     justify-content: space-between;
     display: flex;
 }
@@ -62,7 +64,7 @@ html {
     color: white;
     transition: color 0.3s ease;
     padding: 1.5rem;
-    font-size: 19x;
+    font-size: 18px;
 }
 
 .menu a:hover {
@@ -80,7 +82,7 @@ html {
     margin-top: auto;
     margin-bottom: 1rem;
     padding: 15px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
 .menu li:hover {
@@ -111,7 +113,10 @@ body {
     color: black;
     font-size: 60px;
     text-align: center;
+    transition: fadeIn 2s;
+    transition-timing-function: ease;
 }
+
 
 .first_bloc {
     margin: 100px;
@@ -140,6 +145,21 @@ body {
     background: white;
     margin: auto;
 }
+
+
+/* ----- Bande ----- */
+
+
+.bande {
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.slogan
 
 
 /* ----- Boîtes drag & drop ----- */
@@ -179,8 +199,8 @@ body {
 
 .copyright {
     text-align: center;
-    color: black;
-    margin: auto;
+    color: white;
+    margin-top: 160px;
     font-family: TommyMEDIUM, Arial;
     user-select: none;
 }
@@ -229,10 +249,13 @@ body {
 
 @keyframes fadeIn {
     From {
-        Opacity : 0 ;
+        transition-property: opacity;
+        transition-delay: 2s;
+        opacity: 0;
     }
     To {
         Opacity : 1 ;
+
     }
 }
 
