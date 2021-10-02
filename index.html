@@ -4,79 +4,52 @@
         <meta charset="utf-8">
         <title>Générateur Formulaire HTML</title>
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-       <!-- script src="JS/script.js"></script> -->
+        <script src="JS/script.js"></script>
     </head>    
     <main>
     <header>
             <div id="titre_et_nav">
-                <h1 id="titre_principal" data-item='titre'>Générateur de Formulaire HTML</h1>
+                    <h1 id="titre_principal">FRAJ-Form</h1>
 
                 <!-- Menu -->
                 <nav class="navbar">
                     <ul class="menu">
-                        <li><a href="#">ACCUEIL</a></li>
-                        <li><a href="pageTest.html">PAGE DE TEST</a></li>
-                        <li><a href="#">MENU 2</a></li>
-                        <li><a href="#">MENU 3</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="pageTest.html">TEST PAGE</a></li>
+                        <li><a href="https://www.mcdonalds.fr/produits/menus">MCDONALD'S</a></li>
+                        <li><a href="https://www.burgerking.fr/">BURGER KING</a></li>
                     </ul>
                 </nav>
                 <!-- Fin Menu -->
             </div>
     </header>
     <body>
-        <div class="cases">
-            <div class="cases_c">
-                <div class="case_c"><strong>Choisissez</strong> un élément</div>
-                <div class="box_c">
-                    <script>
-                        $( function() {
-                            $( "#draggable" ).draggable({revert: "invalid"}).sortable();
-                            $( "#draggable2" ).draggable({revert: "invalid"}).sortable();
-                            $( "#draggable3" ).draggable({revert: "invalid"}).sortable();
-                            $( "#draggable" ).disableSelection();
-                            $( "#droppable" ).droppable({
-                                classes: {
-                                    "ui-droppable-active": "ui-state-active",
-                                    "ui-droppable-hover": "ui-state-hover",
-                                },
-                            drop: function( event, ui ) {
-                                $( this )
-                                .addClass( "ui-state-highlight" )
-                                .find( "p" )
-                                    .html( "Zbeub" );
-                            }
-                            });
-                        } );
-                    </script>
-                    <div id="draggable" class="ui-widget-content">
-                        <p>Case 1</p>
-                    </div>
-                    <div id="draggable2" class="ui-widget-content">
-                        <p>Case 2</p>
-                    </div>
-                    <div id="draggable3" class="ui-widget-content">
-                        <p>Case 3</p>
-                    </div>
-                </div>
+    <section class="first_bloc">
+        <h1 class="body_title">Welcome to FRAJ-Form!</h1>
+            <article class="whoarewe">
+                <h2>Who are we ?</h2>
+                <p>We are students of the IUT of Montpellier-Sète in computer science. Our project is to develop a website that allows users to generate forms in HTML code so that they only have to integrate them into the website. Drag and drop, and it's done.</p>
+            </article>
+    </section>
+        <section class="boxes">
+            <div class="box_drag">
+                <ul class="form_list">
+                    <li>boite1</li>
+                    <li>boite2</li>
+                    <li>boite3</li>
+                </ul>
             </div>
-            <div class="cases_d">
-                <div class="case_d"><strong>Déposez</strong> votre élément</div>
-                <div id="droppable" class="ui-widget-header">boite DEPOSEZ</div>
+            <div class="box_drop">
             </div>
-        </div>
-        <div class="html">
-            <div class="case_html">Code HTML : </div>
-            <textarea rows="5" cols="30" class="box_html"></textarea>
-        </div>
+        </section>
     </body>
     </main>
+
+
     <footer>
-            
-        </div>
+        <p class="copyright">&copy; 2021 - Alexi M., Félix R., Rayane M. et Julien R.</p>
     </footer>
 
 
