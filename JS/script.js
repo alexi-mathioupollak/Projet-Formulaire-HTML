@@ -3,6 +3,8 @@ const fill2 = document.querySelector('.b2');
 const fill3 = document.querySelector('.b3');
 const empties = document.querySelectorAll('.form_list');
 
+let fillDragged;
+
 // Fill listeners
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
@@ -24,6 +26,7 @@ for (const empty of empties) {
 function dragStart() {
     this.className += ' hold';
     setTimeout(() => (this.className = 'invisible'), 0);
+    fillDragged = this;
 }
 
 function dragEnd() {
@@ -45,5 +48,5 @@ function dragLeave() {
 
 function dragDrop() {
     this.className = 'form_list';
-    this.append(fill);
+    this.append(fillDragged);
 }
