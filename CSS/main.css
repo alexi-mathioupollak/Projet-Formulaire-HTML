@@ -26,6 +26,9 @@ body {
     text-align: center;
     transition: fadeIn 2s;
     transition-timing-function: ease;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
 }
 
 
@@ -46,6 +49,10 @@ body {
     margin-top: 100px;
     font-size: 40px;
     font-family: TommyEXTRA;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
 }
 
 .whoarewe p {
@@ -55,6 +62,10 @@ body {
     border-radius: 50px;
     background: white;
     margin: auto;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .aboutus {
@@ -152,15 +163,12 @@ body {
 /* ----- Effects ----- */
 
 
-@keyframes fadeIn {
-    From {
-        transition-property: opacity;
-        transition-delay: 2s;
+@keyframes fadeIn{
+    0% {
         opacity: 0;
     }
-    To {
-        Opacity : 1 ;
-
+    100% {
+        opacity: 1;
     }
 }
 

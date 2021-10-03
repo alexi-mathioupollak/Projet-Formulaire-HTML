@@ -1,28 +1,31 @@
-.example-parent {
-    border: 2px solid #DFA612;
-    color: black;
-    display: flex;
-    font-family: sans-serif;
-    font-weight: bold;
+body {
+    background: darksalmon;
 }
 
-.example-origin {
-    flex-basis: 100%;
-    flex-grow: 1;
-    padding: 10px;
+.fill {
+    background-image: url('https://source.unsplash.com/random/150x150');
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
 }
 
-.example-draggable {
-    background-color: #4AAE9B;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
+.hold {
+    border: solid 5px #ccc;
 }
 
-.example-dropzone {
-    background-color: #6DB65B;
-    flex-basis: 100%;
-    flex-grow: 1;
-    padding: 10px;
+.empty {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    border: solid 3px salmon;
+    background: white;
+}
+
+.hovered {
+    background: green;
+    border-style: dashed;
 }
