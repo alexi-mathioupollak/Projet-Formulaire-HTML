@@ -1,10 +1,8 @@
 body,
 html {
-  height: auto;
   font-family: "TommyREGULAR", sans-serif;
   margin-top: 50px;
   background-color: #f7f7f7;
-    max-width: 100%;
 }
 
 html {
@@ -13,10 +11,8 @@ html {
 
 /* ----- body ----- */
 
+.page {
 
-body {
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -36,6 +32,36 @@ body {
     margin: 100px;
     border: 2px solid black;
     background-color: #fdfdfd;
+}
+
+.scroll_link {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.first_bloc a {
+    font-family: TommyBOLD, Arial, Helvetica;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    border: 0px solid black;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s ease;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.first_bloc a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .2);
 }
 
 .whoarewe {
@@ -121,41 +147,41 @@ body {
 
 @font-face {
     font-family: TommyBOLD;
-    src: url(/fonts/bold.otf);
+    src: url(../fonts/bold.otf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: TommyBLACK;
-    src: url(/fonts/black.otf);
+    src: url(../fonts/black.otf);
 }  
 
 @font-face {
     font-family: TommyMEDIUM;
-    src: url(/fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf);
+    src: url(../fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf);
     font-weight: Medium;
 }
 
 @font-face {
     font-family: TommyTHIN;
-    src: url(/fonts/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf);
+    src: url(../fonts/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf);
     font-weight: Thin;
 }  
 
 @font-face {
     font-family: TommyREGULAR;
-    src: url(/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
+    src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
     font-weight: Regular;
 }  
 
 @font-face {
     font-family: TommyEXTRA;
-    src: url(/fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf);
+    src: url(../fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf);
 }
 
 @font-face {
     font-family: Cali;
-    src: url(/fonts/cali.ttf);
+    src: url(../fonts/cali.ttf);
     font-weight: auto;
 }
 

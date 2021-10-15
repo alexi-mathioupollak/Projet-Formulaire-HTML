@@ -50,6 +50,19 @@
     align-items: center;
 }
 
+.receive_list {
+    background-color: white;
+    text-decoration: none;
+    list-style: none;
+    border: 3px solid black;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
 .drag_title {
     text-align: center;
     font-size: 40px;
@@ -114,6 +127,8 @@
 
 .hold {
     border: solid #ccc 3px;
+    background-color: red;
+    animation: colorChange 1s;
 }
 
 .hovered {
@@ -176,6 +191,16 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+        transition: background-color 0.3s ease;
+    }
+    100% {
+        background-color: green;
     }
 }
 
