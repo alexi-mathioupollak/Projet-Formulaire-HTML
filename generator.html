@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="CSS/footer.css">
         <link rel="stylesheet" href="CSS/main.css">
         <link rel="stylesheet" href="CSS/generator.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     </head>
     <div class="page">
     <main>
@@ -54,20 +56,20 @@
                 <div class="box_drag">
                     <h1 class="drag_title">DRAG SECTION</h1>
                     <ul class="form_list" id="form_list_#">
-                        <div class="b1" id="box1" draggable="true">boite1</div>
-                        <div class="b2" id="box2" draggable="true">boite2</div>
-                        <div class="b3" id="box3" draggable="true">boite3</div>
+                        <button class="draggable">Envoyer</button>
+                        <textarea class="draggable">Textarea</textarea>
+                        <label class="draggable">Label</label>
                     </ul>
                 </div>
-                <img src="img/arrow.png" class="arrow" draggable="false"></img>
-                <div class="box_drop">
+                <img src="img/arrow.png" class="arrow"></img>
+                <div class="box_drop" class="droppable">
                     <h1 class="drop_title">DROP SECTION</h1>
-                        <ul class="receive_list"></ul>
+                        <ul class="receive_list" id="droppable"></ul>
                 </div>
             </section>
             <section class="html_box_principal">
                 <h1 class="html_title">HTML CODE SECTION</h1>
-                <textarea class="html_box_code" minlength="1000" contenteditable="true" readonly>
+                <textarea id="code_generated" class="html_box_code" minlength="1000" contenteditable="true" readonly>
 <DOCTYPE html>
 <html>
     <head>
