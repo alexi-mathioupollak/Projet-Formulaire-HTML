@@ -1,0 +1,18 @@
+
+Creer une base de données :
+exemple : users ou utilisateurs
+
+attributs : id , nom, prenom, email, password
+(attributs optionnel : pseudo, date)
+- l'attribut id, sera de type INTEGER, est sera incrémenté à chaque nouveau tuple (AUTO-INCREMENT)
+
+code SQL :
+
+CREATE OR REMPLACE TABLE Utilisateurs (
+    INT id,
+    VARCHAR(20) nom,
+    VARCHAR(20) prenom,
+    VARCHAR(20) nom,
+    VARCHAR(20) password, //mettre condition de longuer min
+    PRIMARY_KEY (id);
+)

@@ -1,31 +1,39 @@
 
-/* 
-label
-{
-	width: 150px; 
+/* h2 {
 } */
 
-label {
-	display: block;
-	width: 125px;
-	float: left;
-    /* padding: auto; */
+form { 
+    display : flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid;
 }
+
+.nom_pre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nom_pre > input {
+    width: 50%;
+}
+
+
+label {
+	/* display: block; */
+	/* float: left; */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+} 
 
 input {
     /* margin-top: 10px; */
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
-
-
-form {  
-    width:100%;
-    padding: 20px;
-    /* border: 1px solid #f1f1f1; */
-    background: #fff;
-    /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
-}
 
 
