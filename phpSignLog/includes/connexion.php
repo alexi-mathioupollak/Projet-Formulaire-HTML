@@ -15,7 +15,8 @@
             $rVerifE->execute(['email' => $lemail]);
 
             $result = $rVerifE->fetch();
-            var_dump($result);
+
+            // var_dump($result);
 
 
             if ($result == true){
@@ -34,10 +35,7 @@
             } else {
                 echo "L'email " . $lemail . "n'existe pas ou n'est associé à aucun compte";
             }
-
-
-        
-        
+            
         } else {
             echo "Veuillez compléter tous les champs";
         }
