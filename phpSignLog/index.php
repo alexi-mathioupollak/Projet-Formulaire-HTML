@@ -17,19 +17,21 @@
 <body>
     <!-- Partie de session -->
     <h3>Bienvenue sur votre profil</h2>
-    <?php
-        if(isset($_SESSION['email'] && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
+    <div class="session">
+        <?php
+            if(isset($_SESSION['email'] && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
 
-            ?>
-            <p>Votre Email : <?php echo $_SESSION['email']; ?> </p>
-            <p>Votre Nom : <?php echo $_SESSION['nom']; ?> </p>
-            <p>Votre Prenom : <?php echo $_SESSION['prenom']; ?> </p>
-            <?php
+                ?>
+                <p>Votre Email : <?php echo $_SESSION['email']; ?> </p>
+                <p>Votre Nom : <?php echo $_SESSION['nom']; ?> </p>
+                <p>Votre Prenom : <?php echo $_SESSION['prenom']; ?> </p>
+                <?php
 
-        } else {
-            echo "Veuillez vous connecter à votre compte (ou créez en un compte)";
-        }
-    ?>
+            } else {
+                echo "Veuillez vous connecter à votre compte (ou créez en un compte)";
+            }
+        ?>
+    </div>
 
     <h3>Login</h3>
     <!-- Partie Connexion -->

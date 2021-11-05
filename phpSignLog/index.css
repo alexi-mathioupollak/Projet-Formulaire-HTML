@@ -2,12 +2,11 @@
 body {
     display: flex;
     flex-direction: column;
-    /* float: right; */
-    text-align: center;
+    /* text-align: left; */
     
 }
 
-body > h3, body > form {
+body > h3, body > form, body > .session {
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,15 +31,12 @@ form {
 
 
 label {
-	/* display: block; */
-	/* float: left; */
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
 } 
 
 input {
-    /* margin-top: 10px; */
     margin-bottom: 20px;
     padding: 15px;
 }
