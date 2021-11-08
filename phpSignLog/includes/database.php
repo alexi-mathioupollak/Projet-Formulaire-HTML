@@ -1,7 +1,7 @@
 <?php
 
     define('HOST', 'localhost');
-    define('BD_NAME','siteHTMLform');
+    define('BD_NAME','rivalsf');
     define('USER','rivalsf');
     define('PASS','tartiflette$');
 

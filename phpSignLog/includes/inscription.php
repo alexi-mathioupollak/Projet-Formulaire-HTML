@@ -36,7 +36,7 @@
                             'email' => $semail,
                             'password' => $password,
                         ])
-                        echo "Le compte a bien été crée";
+                        echo "Le compte a bien été créé";
                     } else {
                         echo "Email déjà utilisé !"
                     }

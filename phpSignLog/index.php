@@ -17,20 +17,9 @@
 <body>
     <!-- Partie de session -->
     <h3>Bienvenue sur votre profil</h2>
+
     <div class="session">
-        <?php
-            if(isset($_SESSION['email'] && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
-
-                ?>
-                <p>Votre Email : <?php echo $_SESSION['email']; ?> </p>
-                <p>Votre Nom : <?php echo $_SESSION['nom']; ?> </p>
-                <p>Votre Prenom : <?php echo $_SESSION['prenom']; ?> </p>
-                <?php
-
-            } else {
-                echo "Veuillez vous connecter à votre compte (ou créez en un compte)";
-            }
-        ?>
+        <?php include 'includes/session.php';?> 
     </div>
 
     <h3>Login</h3>
@@ -44,10 +33,10 @@
     <?php include 'includes/connexion.php'; ?>
 
 
-     <!-- Partie Inscription -->
+    <!-- Partie Inscription -->
     <h3>Formulaire d'inscription</h3>
     <form method="post">
-        <label id="pres">Créer votre Compte FRAJ</label><br><br>       
+        <label id="pres">Créer votre Compte FRAJ</label><br><br>
         <div class="nom_pre">
             <input type="text" id="nom" placeholder="Votre Nom" required/><br>
             <input type="text" id="prenom" placeholder="Votre Prénom" required/><br>
