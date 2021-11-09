@@ -16,15 +16,24 @@
                     include 'database.php';
                     global $dataB;
 
+                    // Requete
+                    $sql = "SELECT * FROM users WHERE email = :email"
+
                     // Verification que l'email n'a pas été déjà utilisé pour un autre compte
                     $eVerif = $dataB->prepare("SELECT * FROM users WHERE email = :email");
 
                     $eVerif->execute([
                         'email' => $semail
                     ])
+
                     
                     $result = $eVerif->rowCount();
-                    
+                    //$result = $dataB->prepare("SELECT COUNT(*) FROM users WHERE email = :email");
+
+                    $result->execute([
+                        'email' => $semail
+                    ])
+
                     // Email valide et non-utilisé auparavant
                     if($result == 0){
                         // Requete pour l'inscription : INSERT INTO 'nomDeTable'(nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password);
