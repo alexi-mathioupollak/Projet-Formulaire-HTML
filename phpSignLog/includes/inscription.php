@@ -17,14 +17,14 @@
                     global $dataB;
 
                     // Requete
-                    $sql = "SELECT * FROM users WHERE email = :email"
+                    $sql = "SELECT * FROM users WHERE email = :email";
 
                     // Verification que l'email n'a pas été déjà utilisé pour un autre compte
                     $eVerif = $dataB->prepare("SELECT * FROM users WHERE email = :email");
 
                     $eVerif->execute([
                         'email' => $semail
-                    ])
+                    ]);
 
                     
                     $result = $eVerif->rowCount();
@@ -32,7 +32,7 @@
 
                     $result->execute([
                         'email' => $semail
-                    ])
+                    ]);
 
                     // Email valide et non-utilisé auparavant
                     if($result == 0){
@@ -44,7 +44,7 @@
                             'prenom' => $prenom,
                             'email' => $semail,
                             'password' => $password,
-                        ])
+                        ]);
                         echo "Le compte a bien été créé";
                     } else {
                         echo "Email déjà utilisé !"
