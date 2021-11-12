@@ -10,6 +10,7 @@
         $dataB->setAttribute(PDO::AFTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e){
         echo $e;
+	//->getMessage();
     }
 
 ?>

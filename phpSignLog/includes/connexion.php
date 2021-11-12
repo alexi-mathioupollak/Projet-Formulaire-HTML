@@ -9,7 +9,7 @@
 
         	if( !empty($lpassword) && !empty($lemail)){
 
-            		$rVerifE = $dataB->prepare("SELECT * FROM users WHERE email = :email");
+            		$rVerifE = $dataB->prepare("SELECT * FROM user WHERE email = :email");
 
             		$rVerifE->execute([
 				'email' => $lemail
