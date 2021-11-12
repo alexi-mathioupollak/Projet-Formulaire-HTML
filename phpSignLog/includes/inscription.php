@@ -47,7 +47,7 @@
                         ]);
                         echo "Le compte a bien été créé";
                     } else {
-                        echo "Email déjà utilisé !"
+                        echo "Email déjà utilisé !";
                     }
                 }
                 
