@@ -1,13 +1,20 @@
 
 <?php
 
+	echo "<br/>*** Connection.php ***<br/>";
+
 	if(isset($_POST['formlogin'])){
 
 		extract($_POST);
 		include 'database.php';
 		global $dataB;
 
-        	if( !empty($lpassword) && !empty($lemail)){
+		echo "<br/>_Before if Empty()";
+		echo "</br>email empty() ?"; echo !empty($email);
+		echo "</br>password empty() ?<br/> "; echo !empty($password);
+
+		if(!empty($lpassword) && !empty($lemail)){
+			echo "<br/>__Entry if Empty()";
 
             		$rVerifE = $dataB->prepare("SELECT * FROM user WHERE email = :email");
 
@@ -19,15 +26,25 @@
 
             		// var_dump($result);
 
-			 if ($result == true){
-        	        	$lpassword = $result['password'];
-             		 	if (password_verify($lpassword, $result['password'])){
-                    			echo "Mot correct <br/> Connexion en cours...";
+			echo "<br/>__Before if(result == true)";
+
+			if ($result == true){
+				echo "<br/>___Entry if(result == true)";
+				/*if ($lpassword == $result['password']){
+					echo "<br/>____Entry  mdp==mdp";
+					echo $lpassword;
+					echo $result['password'];
+				}*/
+
+        	        	//echo $lpassword == $result['password'];
+             		 	//if (password_verify($lpassword, $result['password'])){
+                    		if ($lpassword == $result['password']){
+					echo "<br/> Mot correct <br/> Connexion en cours...";
 
       			                $_SESSION['email'] = $result['email'];
                    		 	$_SESSION['nom'] = $result['nom'];
                     			$_SESSION['prenom'] = $result['prenom'];
-
+					echo "<br/> Connexion reussite !";
                 		} else {
                     			echo "Le mot de passe n'est pas valide ";
                 		}

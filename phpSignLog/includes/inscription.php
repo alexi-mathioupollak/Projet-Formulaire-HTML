@@ -35,14 +35,21 @@
 		    var_dump($tab_u);
 
                     // Verification que l'email n'a pas été déjà utilisé pour un autre compte
-                    $eVerif = $dataB->prepare("DELETE * FROM user WHERE email = :email");
+		    try {
+                    	$eVerif = $dataB->prepare("DELETE * FROM user WHERE email = :email");
 
-                    $eVerif->execute([
-                        'email' => $semail
-                    ]);
+                    	$eVerif->execute([
+                        	'email' => $semail
+                    	]);
+			echo "<br/>(enter in try)<br/>";
+		    } catch(PDOException $e){
+		        echo $e;
+		    }
 
-                    $result = $eVerif->rowCount();
-                    /*
+                    if (isset($eVerif)) {
+			$result = $eVerif->rowCount();
+		    } else { $result = 0; }
+	            /*
 		    $result = $dataB->prepare("SELECT COUNT(*) FROM user WHERE email = :email");
 
                     $result->execute([
@@ -65,7 +72,7 @@
                     } else {
 			echo "Email déjà utilisé !";
                     }
-		    $requeteSU = $dataB->prepare("INSERT INTO user VALUES ($tab_ur[1],$tab_u[2],$tab_u[3],$tab_[4])");
+		    $requeteSU = $dataB->prepare("INSERT INTO user VALUES ($tab_u[1],$tab_u[2],$tab_u[3],$tab_[4])");
                     $requeteSU->execute();
                 }
 
