@@ -1,11 +1,3 @@
-<!--- //Code PHP pour la/les sessions -->
-<!--- // La fonction session_start() permet de demarrer une session --->
-<?php session_start();
-    // var_dump($_SESSION);
-    // On nettoie et on detruit une session
-    // session_unset();
-    // session_destroy();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -15,25 +7,8 @@
     <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
 </head>
 <body>
-    <!-- Partie de session -->
-    <h3>Bienvenue sur votre profil</h2>
 
-    <div class="session">
-        <?php include 'includes/session.php';?> 
-    </div>
-
-    <h3>Login</h3>
-    <!-- Partie Connexion -->
-    <form method="post">
-        <input type="email" name="lemail" id="lemail" placeholder="Votre Email" required> <br>
-        <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required> <br>
-        <input type="submit" name="formlogin" id="formlogin" value="Se connecter">
-    </form>
-
-    <?php include 'includes/login.php'; ?>
-
-
-    <!-- Partie Inscription -->
+<!--- Page Inscription -->
     <h3>Formulaire d'inscription</h3>
     <form method="post">
         <label id="pres">Créer votre Compte FRAJ</label><br><br>
@@ -48,8 +23,6 @@
     </form>
 
     <?php include 'includes/signup.php'; ?>
-
-
 
 </body>
 </html>

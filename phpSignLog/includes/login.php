@@ -30,14 +30,9 @@
 
 			if ($result == true){
 				echo "<br/>___Entry if(result == true)";
-				/*if ($lpassword == $result['password']){
-					echo "<br/>____Entry  mdp==mdp";
-					echo $lpassword;
-					echo $result['password'];
-				}*/
 
         	        	//echo $lpassword == $result['password'];
-             		 	//if (password_verify($lpassword, $result['password'])){
+             		 	//if (password_verify($lpassword, $result['password'])){  //Si on  hash les password
                     		if ($lpassword == $result['password']){
 					echo "<br/> Mot correct <br/> Connexion en cours...";
 
@@ -50,7 +45,8 @@
                 		}
 
             		} else {
-                		echo "L'email " . $lemail . "n'existe pas ou n'est associé à aucun compte";
+				echo "<br/>";
+                		echo "L'email " . $lemail . " n'existe pas ou n'est associé à aucun compte";
             		}
         	} else {
            		 echo "Veuillez compléter tous les champs";
