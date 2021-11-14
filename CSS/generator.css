@@ -1,0 +1,216 @@
+/* ----- Boîtes drag & drop ----- */
+
+
+.body_generator {
+    display: flex;
+    flex-direction: column;
+}
+
+.body_generator > h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.body_generator > p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.box_drag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_drop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_list {
+    background-color: white;
+    text-decoration: none;
+    list-style: none;
+    border: 3px solid black;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.receive_list {
+    background-color: white;
+    text-decoration: none;
+    list-style: none;
+    border: 3px solid black;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.drag_title {
+    text-align: center;
+    font-size: 40px;
+    font-family: TommyEXTRA, Arial;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 18.65rem;
+}
+
+.drop_title {
+    text-align: center;
+    font-size: 40px;
+    font-family: TommyEXTRA, Arial;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 18.55rem;
+}
+
+
+/* ----- Flèche entre les 2 boxes ----- */
+
+
+.arrow {
+    color: black;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+
+/* ----- Boîtes avec éléments ----- */
+
+
+.b1 {
+    user-select: none;
+    border: 3px solid black;
+    width: 40rem;
+    margin-right: 2.5rem;
+    height: 5rem;
+    margin-top: 0;
+    background-color: red;
+}
+.b2 {
+    user-select: none;
+    border: 3px solid black;
+    width: 40rem;
+    margin-right: 2.5rem;
+    height: 5rem;
+    margin-top: 0;
+    background-color: red;
+}
+.b3 {
+    user-select: none;
+    border: 3px solid black;
+    width: 40rem;
+    margin-right: 2.5rem;
+    height: 5rem;
+    margin-top: 0;
+    background-color: red;
+}
+
+.hold {
+    border: solid #ccc 3px;
+    background-color: red;
+    animation: colorChange 1s;
+}
+
+.hovered {
+    background: #d9d9d9;
+    border: solid black 3px;
+}
+
+.invisible {
+    display: none;
+}
+
+
+/* ----- Lien vers contact us ----- */
+
+
+.contactus_link {
+    text-decoration: none;
+    color: white;
+    border: 1px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.contactus_link:hover {
+    color: black;
+    background-color: #f7f7f7;
+}
+
+
+/* ----- HTML box ----- */
+
+
+.html_title {
+    text-align: center;
+    font-size: 40px;
+    font-family: TommyEXTRA, Arial;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.html_box_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.html_box_code {
+    width: 300rem;
+    margin-bottom: 100px;
+    width: 100rem;
+    height: 700px;
+
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+        transition: background-color 0.3s ease;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    .boxes {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
