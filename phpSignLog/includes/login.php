@@ -39,6 +39,8 @@
                    	$_SESSION['nom'] = $result['nom'];
                     $_SESSION['prenom'] = $result['prenom'];
 					echo "<br/> Connexion reussite !";
+
+					header("sessionP.php");
                 	
                	} else {
                			echo "Le mot de passe n'est pas valide "; 
