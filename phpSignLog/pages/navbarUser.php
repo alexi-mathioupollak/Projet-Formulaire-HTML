@@ -11,13 +11,13 @@
 	<nav class="menu-nav">
 		<ul>
 			<li class="btn">
-				<a href="navbar">Accueil</a>
+				<a href="navbar.php">Accueil</a>
 			</li>
 			<li class="btn">
-				<a href="signupP.php">Inscription</a>
+				<a href="sessionP.php">Compte</a>
 			</li>
 			<li class="btn">
-				<a href="oginP.php">Connexion</a>
+				<a href="../includes/logout.php">Se Déconnecter</a>
 			</li>
 		
 		</ul>

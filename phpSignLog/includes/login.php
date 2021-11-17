@@ -40,7 +40,7 @@
                     $_SESSION['prenom'] = $result['prenom'];
 					echo "<br/> Connexion reussite !";
 
-					header("sessionP.php");
+					//header("../pages/sessionP.php");
                 	
                	} else {
                			echo "Le mot de passe n'est pas valide "; 

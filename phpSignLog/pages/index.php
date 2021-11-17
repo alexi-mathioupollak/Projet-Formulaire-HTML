@@ -1,21 +1,14 @@
 <!--- //Code PHP pour la/les sessions -->
 <!--- // La fonction session_start() permet de demarrer une session --->
-<?php session_start();
+<?php //session_start();
     // var_dump($_SESSION);
     // On nettoie et on detruit une session
     // session_unset();
     // session_destroy();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <!-- <title>page index</title> -->
-    <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
-</head>
-<body>
-    <?php include 'navbar.php'; ?>
+
+    <?php include 'navbarVisitor.php'; ?>
 
     <!-- Partie de session -->
     <h3>Bienvenue sur votre profil</h2>
@@ -52,6 +45,3 @@
     <?php include '../includes/signup.php'; ?>
 
 
-
-</body>
-</html>
