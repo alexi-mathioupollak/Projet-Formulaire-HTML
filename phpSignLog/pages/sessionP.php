@@ -8,6 +8,6 @@
 <div class="session">
     <?php include '../includes/session.php';?> 
 </div>
-<form method="post">
+<form method="post" action="">
     <input type="button" name="formlogout" id="formlogout" value="Se Déconnecter">
 </form>

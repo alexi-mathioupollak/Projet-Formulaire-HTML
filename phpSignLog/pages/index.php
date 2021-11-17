@@ -8,7 +8,7 @@
 ?>
 
 
-    <?php include 'navbarVisitor.php'; ?>
+    <?php include 'navbar.php'; ?>
 
     <!-- Partie de session -->
     <h3>Bienvenue sur votre profil</h2>
