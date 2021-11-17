@@ -1,8 +1,11 @@
 
 <?php
 
+	session_start(); 
+
 	echo "<br/>*** Connection.php ***<br/>";
 
+		
 	if(isset($_POST['formlogin'])){
 
 		extract($_POST);
@@ -12,6 +15,7 @@
 		//echo "<br/>_Before if Empty()";
 		//echo "</br>email empty() ?"; echo !empty($email);
 		//echo "</br>password empty() ?<br/> "; echo !empty($password);
+
 
 		if(!empty($lpassword) && !empty($lemail)){
 			//echo "<br/>__Entry if Empty()";
@@ -23,8 +27,6 @@
 			]);
 
             $result = $rVerifE->fetch();
-
-            //var_dump($result);
 
 			//echo "<br/>__Before if(result == true)";
 
@@ -40,8 +42,8 @@
                     $_SESSION['prenom'] = $result['prenom'];
 					echo "<br/> Connexion reussite !";
 
-					//header("../pages/sessionP.php");
-                	
+					header("Location ../pages/sessionP.php");
+               	
                	} else {
                			echo "Le mot de passe n'est pas valide "; 
 	      		}

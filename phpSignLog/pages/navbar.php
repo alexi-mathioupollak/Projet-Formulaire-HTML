@@ -1,4 +1,6 @@
 
+<?php include '../includes/session.php';  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,44 +10,41 @@
 </head>
 <body>
 
-	<?php 
+	<?php
 
-	if (isset($_SESSION['email'])) { ?>
+	if ($success) { ?>
 	
-	<nav class="menu-nav">
-		<ul>
-			<li class="btn">
-				<a href="navbarUser.php">Accueil</a>
-			</li>
-			<li class="btn">
-				<a href="sessionP.php">Compte</a>
-			</li>
-			<li class="btn">
-				<a href="../includes/logout.php">Se Déconnecter</a>
-			</li>
-		
-		</ul>
-	</nav>
-	
+		<nav class="menu-nav">
+			<ul>
+				<li class="btn">
+					<a href="navbar.php">Accueil</a>
+				</li>
+				<li class="btn">
+					<a href="sessionP.php">Compte</a>
+				</li>
+				<li class="btn">
+					<a href="../includes/logout.php">Se Déconnecter</a>
+				</li>
+			</ul>
+		</nav>
 
-<?php } else { ?>
+	<?php } else { ?>
 
+		<nav class="menu-nav">
+			<ul>
+				<li class="btn">
+					<a href="navbar.php">Accueil</a>
+				</li>
+				<li class="btn">
+					<a href="signupP.php">Inscription</a>
+				</li>
+				<li class="btn">
+					<a href="loginP.php">Connexion</a>
+				</li>
+			
+			</ul>
+		</nav>
 
-	<nav class="menu-nav">
-		<ul>
-			<li class="btn">
-				<a href="navbarVisitor.php">Accueil</a>
-			</li>
-			<li class="btn">
-				<a href="signupP.php">Inscription</a>
-			</li>
-			<li class="btn">
-				<a href="loginP.php">Connexion</a>
-			</li>
-		
-		</ul>
-	</nav>
-
-<?php } ?>
+	<?php } ?>
 
 </body>

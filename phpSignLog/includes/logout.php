@@ -1,6 +1,9 @@
 <?php   
-session_start(); //to ensure you are using same session
+session_start(); 
+session_unset();
 session_destroy(); //destroy the session
-header("../pages/index.php"); //to redirect back to "index.php" after logging out
+echo "Deconnexion en cous...";
+echo "Redicrection vers la Homepage";
+header("Location: ../pages/home.php"); //to redirect back to "index.php" after logging out
 exit();
 ?>

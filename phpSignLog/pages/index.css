@@ -41,5 +41,10 @@ input {
     padding: 15px;
 }
 
+a {
+    justify-self: center;
+    justify-content: center;
+}
+
 
 
