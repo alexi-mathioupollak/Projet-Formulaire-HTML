@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
 </head>
 <body>
+    <?php include 'navbar.php'; ?>
+
     <!-- Partie de session -->
     <h3>Bienvenue sur votre profil</h2>
 
     <div class="session">
-        <?php include 'includes/session.php';?> 
+        <?php include '../includes/session.php';?> 
     </div>
 
     <h3>Login</h3>
@@ -30,7 +32,7 @@
         <input type="submit" name="formlogin" id="formlogin" value="Se connecter">
     </form>
 
-    <?php include 'includes/login.php'; ?>
+    <?php include '../includes/login.php'; ?>
 
 
     <!-- Partie Inscription -->
@@ -47,7 +49,7 @@
         <input type="submit" name="formsend" id="formsend" value="S'inscrire">
     </form>
 
-    <?php include 'includes/signup.php'; ?>
+    <?php include '../includes/signup.php'; ?>
 
 
 

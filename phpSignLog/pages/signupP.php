@@ -1,14 +1,9 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <!-- <title>page index</title> -->
-    <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
-</head>
-<body>
 
-<!--- Page Inscription -->
+    <?php include 'navbar.php'; ?>
+
+
+    <!--- Page Inscription -->
     <h3>Formulaire d'inscription</h3>
     <form method="post">
         <label id="pres">Créer votre Compte FRAJ</label><br><br>
@@ -22,7 +17,4 @@
         <input type="submit" name="formsend" id="formsend" value="S'inscrire">
     </form>
 
-    <?php include 'includes/signup.php'; ?>
-
-</body>
-</html>
+    <?php include '../includes/signup.php'; ?>
