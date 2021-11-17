@@ -25,12 +25,11 @@
                         <li><a href="generator.html" draggable="false">GENERATOR</a></li>
                     </ul>
                 </nav>
-
                 <!-- Fin Menu -->
-            
             </div>
-
         </header>
+
+
 
         <body>
 
@@ -44,8 +43,6 @@
                 <p>Simply hold down a block in the "Drag" section, drag it to the "Drop" section, and you will see that your HTML code has appeared in the "HTML code" block.</p>
             </article>
         </section>
-
-
         <section class="body_generator">
             <div class="bande">
                 <p class="slogan">"Generate Does The Job "</p>
@@ -62,20 +59,30 @@
             <section class="boxes">
                 <div class="box_drag">
                     <h1 class="drag_title">DRAG SECTION</h1>
-                    <ul class="form_list" id="form_list_#">
-                        <button class="draggable">Envoyer</button>
-                        <textarea class="draggable">Textarea</textarea>
-                        <label class="draggable">Label</label>
-                    </ul>
+
+                    <div class="drag_list">
+
+                        <ul class="form_list">
+                            <li><button class="draggable">Envoyer</button></li>
+                            <li><textarea class="draggable">Textarea</textarea></li>
+                            <li><label class="draggable">Label</label></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                
+
                 <img src="img/arrow.png" class="arrow"></img>
 
 
                 <div class="box_drop" class="droppable">
                     <h1 class="drop_title">DROP SECTION</h1>
-                        <ul class="receive_list" id="droppable"></ul>
+                    
+                        <div class="drop_list">
+                            <ul class="receive_list" id="droppable">
+
+                            </ul>
+                        </div>
                 </div>
             </section>
 
@@ -83,25 +90,21 @@
             <section class="html_box_principal">
                 <h1 class="html_title">HTML CODE SECTION</h1>
                 <textarea id="code_generated" class="html_box_code" minlength="1000" contenteditable="true" readonly>
-                
-                
-                <DOCTYPE html>
-                <html>
-                    <head>
-                        <meta charset="utf-8">
-                        <titleThanks for using FRAJ-Form!</title>
-                        <link rel="stylesheet" href="CSS/main.css">
-                        <script src="JS/script.js"></script>
-                    </head>
-                    <body>
-                        <p>Hey! i'm an example</p>
-                    </body>
-                    <footer>
-                        <p>Copyright - FRAJ-Form</p>
-                    </footer>
-                </html>
-
-
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Thanks for using FRAJ-Form!</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <script src="JS/script.js"></script>
+    </head>
+    <body>
+          <p>Hey! i'm an example</p>
+    </body>
+    <footer>
+          <p>Copyright - FRAJ-Form</p>
+    </footer>
+</html>
                 </textarea>
             </section>
         </section>

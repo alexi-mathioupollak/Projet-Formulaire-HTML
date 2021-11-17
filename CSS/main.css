@@ -3,7 +3,6 @@ html {
   font-family: "TommyREGULAR", sans-serif;
   margin-top: 50px;
   background-color: #f7f7f7;
-  width: auto;
 }
 
 html {
@@ -120,7 +119,7 @@ html {
 
 .bande {
     border: 1px solid black;
-    width: 100%;
+    width: auto;
     height: 200px;
     background-color: black;
     margin-top: 100px;

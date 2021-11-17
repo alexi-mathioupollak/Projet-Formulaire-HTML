@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-$( function() {
-    $( "#draggable" ).draggable(
-        {
-            revert: true
-        }
-    );
-  } );
-=======
 $( function() {
     $( ".draggable" ).draggable({
         cancel: false,
@@ -14,19 +5,20 @@ $( function() {
         revert: 'invalid'
     });
 
-    $( "#droppable" ).droppable({
+    $( ".receive_list" ).droppable({
+        accept: ".draggable",
         drop: function( event, ui ) {
             $( this )
                 .addClass('dropped')
-                .append($(ui.helper).clone());
+                .append($(ui.draggable).clone());
             $("#code_generated").val($("#droppable").html())
         }
     });
-});
+});s
+
 
 $('.draggable').click(function(){
     let texte = prompt("Entrer un texte", "Texte");
     $ ( this )
         .text(texte)
 });
->>>>>>> 4ef88f2de2485b1660c5d331013a15fb33a06c4a
