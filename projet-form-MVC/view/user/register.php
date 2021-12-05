@@ -1,7 +1,7 @@
 <?php
 
 
-    require_once './config/BDD.php';
+    require_once './config/Database.php';
 
 
   if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
@@ -110,11 +110,11 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css"> -->
 </head>
 
 <body>
@@ -123,7 +123,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
             <div class="block-heading" style="height: -5px;">
                 <h2 class="text-info" style="text-align: center;"><strong>S'inscrire</strong></h2>
             </div>
-            <p style="text-align: center;">Remplissez ce formulaire pour créer votre compte SauveteurExpress.<br></p>
+            <p style="text-align: center;">Remplissez ce formulaire pour créer votre compte FRAJ-Form.<br></p>
             <form method="post">
                 <?php
                 if (isset($er_pseudo)){
@@ -164,10 +164,10 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
             </form>
         </div>
     </section>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="../assets/js/vanilla-zoom.js"></script>
-    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/theme.js"></script> -->
 </body>
 </html>
