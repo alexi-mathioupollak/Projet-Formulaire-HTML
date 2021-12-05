@@ -1,0 +1,103 @@
+<DOCTYPE html xmlns="http://www.w3.org/1999/html">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Générateur Formulaire HTML</title>
+        <link rel="stylesheet" href="assets/CSS/navbar.css">
+        <link rel="stylesheet" href="assets/CSS/footer.css">
+        <link rel="stylesheet" href="assets/CSS/main.css">
+        <link rel="stylesheet" href="assets/CSS/generator.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    </head>
+    <div class="page">
+    <main>
+        <header>
+            <div id="titre_et_nav">
+                <div class="princ_title">
+                    <h1 id="titre_principal">FRAJ-Form</h1>
+                </div>
+
+                <!-- Menu -->
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li><a href="index.html" draggable="false">HOME</a></li>
+                        <li><a href="generator.html" draggable="false">GENERATOR</a></li>
+                        <li><a href="https://www.mcdonalds.fr/produits/menus" draggable="false">MCDONALD'S</a></li>
+                        <li><a href="https://www.burgerking.fr/" draggable="false">BURGER KING</a></li>
+                    </ul>
+                </nav>
+                <!-- Fin Menu -->
+            </div>
+        </header>
+        <body>
+
+        <section class="first_bloc">
+            <h1 class="body_title">GENERATOR PAGE</h1>
+            <div class="scroll_link">
+                <a href="#scroll">FORM GENERATOR</a>
+            </div>
+            <article class="whoarewe">
+                <h2>How to use ?</h2>
+                <p>Simply hold down a block in the "Drag" section, drag it to the "Drop" section, and you will see that your HTML code has appeared in the "HTML code" block.</p>
+            </article>
+        </section>
+        <section class="body_generator">
+            <div class="bande">
+                <p class="slogan">"Generate Does The Job "</p>
+                <p id="scroll">Félix R. 2021</p>
+            </div>
+            <h1>DRAG & DROP SECTION</h1>
+            <p>Do not hesitate to ask us for help in the "CONTACT US"
+                section.
+                <a class="contactus_link" id="contactus_link" href="contactus.html">CLICK HERE</a>
+                to be redirected to the page.</p>
+            <section class="boxes">
+                <div class="box_drag">
+                    <h1 class="drag_title">DRAG SECTION</h1>
+                    <ul class="form_list" id="form_list_#">
+                        <button class="draggable">Envoyer</button>
+                        <textarea class="draggable">Textarea</textarea>
+                        <label class="draggable">Label</label>
+                    </ul>
+                </div>
+                <img src="assets/img/arrow.png" class="arrow"></img>
+                <div class="box_drop" class="droppable">
+                    <h1 class="drop_title">DROP SECTION</h1>
+                        <ul class="receive_list" id="droppable"></ul>
+                </div>
+            </section>
+            <section class="html_box_principal">
+                <h1 class="html_title">HTML CODE SECTION</h1>
+                <textarea id="code_generated" class="html_box_code" minlength="1000" contenteditable="true" readonly>
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <titleThanks for using FRAJ-Form!</title>
+        <link rel="stylesheet" href="assets/CSS/main.css">
+        <script src="assets/JS/script.js"></script>
+    </head>
+    <body>
+          <p>Hey! i'm an example</p>
+    </body>
+    <footer>
+          <p>Copyright - FRAJ-Form</p>
+    </footer>
+</html>
+                </textarea>
+            </section>
+        </section>
+        </body>
+        <script src="assets/JS/script.js"></script>
+        <script src="assets/JS/HTMLboxscript.js"></script>
+    </main>
+
+
+    <footer>
+        <div class="bandefooter">
+            <p class="copyright">&copy; 2021 - Alexi M., Félix R., Rayane M. et Julien R.</p>
+        </div>
+    </footer>
+    </div>
+    </html>
