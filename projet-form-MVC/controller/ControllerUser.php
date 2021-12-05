@@ -16,9 +16,6 @@ class ControllerUser {
         $controller='user';
         $view='register';
         require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
-
-
-
     }
 
     public static function login() {
@@ -75,12 +72,6 @@ class ControllerUser {
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
-   public static function sauveteurs() {
-       $controller='user';
-       $view='sauveteurs';
-       $pagetitle='FRAJ-Form - Sauveteurs';
-       require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
-   }
 
 
 
