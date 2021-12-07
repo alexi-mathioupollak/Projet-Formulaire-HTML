@@ -2,11 +2,21 @@
 
 body 
 {
-    display: flex;
     background-color: grey;
+}
+#elem
+{
+    display: flex;
     justify-content: center;
 }
 
+#codehtml
+{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    
+}
 
 /* partie zone */
 
@@ -54,3 +64,12 @@ body
 
 /* partie code html */
 
+#code
+{
+    display: flex;
+    min-height: 30rem;
+    width: 62%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 1rem;
+}

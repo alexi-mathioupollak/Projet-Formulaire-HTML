@@ -39,5 +39,7 @@ $(function () {
 });
 
 $('#drop').dblclick(function(){
-    $(this).hide();
+    let texte = prompt("Entrer un texte", "Texte");
+    $ ( this )
+        .html(texte)
 });
