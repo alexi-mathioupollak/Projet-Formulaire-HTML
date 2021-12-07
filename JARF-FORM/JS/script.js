@@ -2,7 +2,9 @@
 //     $('body').css("background-color", "red");
 // })
 $(function () {
-    $("#items").accordion();
+    $("#items").accordion({
+        heightStyle: "content"
+      });
 });
 
 
