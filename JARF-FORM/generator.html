@@ -11,7 +11,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script src="JS/script.js" defer></script> 
+    <script src="JS/script.js" defer></script>
     <!-- "defer" pour que le scrip ne se lance qu'après le chargement du code html -->
 
 
@@ -20,47 +20,54 @@
 
 <body>
 
-<!-- drag & drop section -->
+    <!-- drag & drop section -->
     <div class="zone">
-<!-- drag section -->
+        <!-- drag section -->
         <section class="part" id="items">
             <h3>Texte</h3>
-            <ul>
-                <li class="drag">
+            <div>
+                <div class="drag">
                     <h1>Grand titre</h1>
-                </li>
-                <li class="drag">
+                </div>
+                <div class="drag">
                     <h3>Petit titre</h3>
-                </li>
-                <li class="drag">
+                </div>
+                <div class="drag">
                     <p>Paragraphe</p>
-                </li>
-            </ul>
+                </div>
+            </div>
+
             <h3>Boutons</h3>
-            <ul>
-                <li class="drag">
+            <div>
+                
+                <div class="drag">
                     <button>Bouton</button>
-                </li>
-                <li class="drag">
-                </li>
-            </ul>
+                </div>
+            </div>
+
+
+
             <h3>Radios / Checkboxes</h3>
-            <ul>
-                <li>ajouterItems</li>
-            </ul>
+
+            <div>
+                ajouterItems
+            </div>
+
             <h3>Input</h3>
-            <ul>
-                <li>ajouterItems</li>
-            </ul>
+
+            <div>
+                ajouterItems
+            </div>
+
             <h3>Select</h3>
-            <ul>
-                <li>ajouterItems</li>
-            </ul>
+
+            <div>ajouterItems</div>
+
         </section>
-<!-- drop section  -->
+        <!-- drop section  -->
         <section class="part" id="form">
-            <ul id="drop">
-            </ul>
+            <div id="drop">
+            </div>
         </section>
     </div>
 </body>

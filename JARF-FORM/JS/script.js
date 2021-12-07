@@ -33,6 +33,11 @@ $(function () {
 
 // manipuler le formulaire (emplacement)
 $(function () {
-    $("#drop").sortable();
+    $("#drop").sortable({
+        cancel: false
+    });
 });
 
+$('#drop').dblclick(function(){
+    $(this).hide();
+});
