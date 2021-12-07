@@ -1,0 +1,61 @@
+/* partie général */
+
+body 
+{
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+/* partie zone */
+
+.zone
+{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content:space-evenly;
+    min-height: 40rem;
+}
+.part
+{
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 1rem ;
+}
+.zone ul
+{
+    text-align: center;
+}
+
+/* partie items proposés */
+
+#items
+{
+    width: 43%;
+    background-color: white;
+}
+
+
+/* partie création formulaire */
+
+#form
+{
+    width: 43%;
+    background-color: white;
+}
+
+#form ul
+{
+    min-height: 40rem;
+    padding-inline-start: 0px;
+}
+
+
+/* partie code html */
+
