@@ -3,9 +3,9 @@ require_once File::build_path(array("model","ModelUser.php")); // chargement du 
 
 class ControllerUser {
 
-    public static function accueil() {
+    public static function home() {
         $controller='user';
-        $view='accueil';
+        $view='home';
         $pagetitle='FRAJ-Form';
         require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
     }
@@ -18,7 +18,15 @@ class ControllerUser {
         require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
     }
 
+    public static function registered(){
+        $voiture = new ModelVoiture($_POST['immatriculation'], $_POST['marque'], $_POST['couleur']);
+        $voiture->save();
+        $tab_v = ModelVoiture::getAllVoitures();
+        require File::build_path(array("view", "created.php"));
+    }
+
     public static function login() {
+
         $pagetitle = 'FRAJ-Form - Connexion';
         $controller='user';
         $view='login';

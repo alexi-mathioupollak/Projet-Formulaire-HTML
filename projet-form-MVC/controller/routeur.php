@@ -23,7 +23,7 @@ if ((isset($_GET['action']))){
 		$controller_class::$action(); 
 	}
 	}else{
-		$controller_class::accueil();
+		$controller_class::home();
 	}
 
 ?>

@@ -50,12 +50,13 @@
                 require File::build_path(array("view", $controller, "$view.php"));
                 ?>
             
-        </div>    
-            <footer class="page-footer dark">
-        <div class="footer-copyright">
-                    <a href="./assets/img/meme_easteregg.jpg"><p>© 2021 FRAJ-Form</p></a>
         </div>
-    </footer>
+
+        <footer>
+            <div class="bandefooter">
+                <p class="copyright">&copy; 2021 - Alexi M., Félix R., Rayane M. et Julien R.</p>
+            </div>
+        </footer>
 </body>
 
 </html>

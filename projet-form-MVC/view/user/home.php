@@ -5,12 +5,6 @@ require_once './config/Database.php';
 ?>
 <div>
     <main class="page landing-page">
-        <section class="clean-block clean-info dark" style="background: rgb(255,255,255); padding-bottom: 10px;">
-            <div class="container">
-                <div class="block-heading"><br><br>
-                    <br><h2 class="text-info" style="color: #0c2461;">Bienvenue sur le site des sauveteurs du dunkerquois </h2><br>
-                </div>
-        </section>
         <section class="first_bloc">
             <h1 class="body_title">Welcome to FRAJ-Form!</h1>
             <article class="whoarewe">
@@ -29,10 +23,13 @@ require_once './config/Database.php';
             <p>To use our FRAJ-Form HTML form generator service, simply go to the "GENERATOR" page. There you will find a mini-tutorial to quickly and simply understand how it works. In principle, you can do it even without a tutorial!</p>
         </section>
 
-        <section class="clean-block about-us">
-            <div class="container">
 
-        </section>
     </main>
+
+    <footer>
+        <div class="bandefooter">
+            <p class="copyright">&copy; 2021 - Alexi M., Félix R., Rayane M. et Julien R.</p>
+        </div>
+    </footer>
 
 </div>

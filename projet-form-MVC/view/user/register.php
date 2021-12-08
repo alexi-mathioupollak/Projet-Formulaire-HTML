@@ -118,6 +118,8 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
 </head>
 
 <body>
+    <main>
+
     <section class="clean-block clean-form dark" style="height: 830.188px;">
         <div class="container text-start" style="height: 459px;">
             <div class="block-heading" style="height: -5px;">
@@ -164,10 +166,9 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
             </form>
         </div>
     </section>
-    <!-- <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="../assets/js/vanilla-zoom.js"></script>
-    <script src="../assets/js/theme.js"></script> -->
+
+
+    </main>
+
 </body>
 </html>
