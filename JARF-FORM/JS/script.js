@@ -31,15 +31,31 @@ $(function () {
     });
 });
 
-// manipuler le formulaire (emplacement)
+// manipuler le formulaire 
+//(emplacement)
 $(function () {
     $("#drop").sortable({
         cancel: false
     });
 });
 
-$('#drop').dblclick(function(){
+//personnalisation 
+$('#dropped').dblclick(function(){
     let texte = prompt("Entrer un texte", "Texte");
     $ ( this )
         .html(texte)
 });
+
+
+//génération de code html
+
+ 
+/*$("#form").on('change', '#drop',function(){
+    //$('#code').html($('#drop').html());
+
+});*/
+/*
+$('#red').click(function(){
+    $('body').at("background-color", "red");
+});
+*/
