@@ -35,39 +35,39 @@ class ControllerUser {
         
   }
 
-    public static function deconnexion() {
+    public static function logout() {
         $pagetitle = 'FRAJ-Form';
         $controller='user';
-        $view='deconnexion';
+        $view='logout';
         require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
         
   }
 
    public static function resetmdp() {
        $controller='user';
-       $view='resetmdp';
-       $pagetitle='FRAJ-Form - Réinitialiser son mot de passe';
+       $view='resetpw';
+       $pagetitle='FRAJ-Form - Reset Password';
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
     public static function resetpseudo() {
         $controller='user';
-        $view='resetpseudo';
-        $pagetitle='FRAJ-Form - Changer de pseudo';
+        $view='resetlogin';
+        $pagetitle='FRAJ-Form - Change Login';
         require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
     }
 
     public static function resetemail() {
         $controller='user';
         $view='resetemail';
-        $pagetitle='FRAJ-Form - Changer de email';
+        $pagetitle='FRAJ-Form - Reset Email';
         require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
     }
 
 
-   public static function redirectionmdp() {
+   public static function redirectionpw() {
        $controller='user';
-       $view='redirectionmdp';
+       $view='redirectionpw';
        $pagetitle='FRAJ-Form';
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }

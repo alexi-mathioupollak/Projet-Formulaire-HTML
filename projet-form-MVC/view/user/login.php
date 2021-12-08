@@ -35,7 +35,7 @@
 
     $mdp= crypt($mdp, '$6$rounds=5000$fraj-form$'); //on crypte le mdp avec la meme clé que pour l'inscription
 
-    $req = $pdo->prepare("SELECT * FROM NDI__User WHERE email = :email AND motdepasse = :mdp"); 
+    $req = $pdo->prepare("SELECT * FROM FRAJ__User WHERE email = :email AND motdepasse = :mdp");
     $req->execute(array('email' => $email, 'mdp' => $mdp));
     $resultat = $req->fetch();
     //on test si les valeurs du formulaire correspondent a la bdd
@@ -99,10 +99,10 @@
                   <?php
                     }
                   ?>
-                <div class="mb-3"><label class="form-label" for="password"><strong>Mot de passe <a href="./index.php?action=resetmdp">Mot de passe oublié</a></strong><br></label>
+                <div class="mb-3"><label class="form-label" for="password"><strong>Password <a href="./index.php?action=resetmdp">Forgot password ?</a></strong><br></label>
                   <input class="form-control" type="password" id="password" name="mdp"></div>
-                <div class="mb-3" style="width: 435px;height: -65px;margin: 20px;padding: 0px;"></div><button class="btn btn-primary text-center" name="connexion" type="submit" style="background: rgb(12,36,97);border-radius: 13px;border-color: rgb(12,36,97);margin: 5px;height: 39px;padding: 7px 12px;transform: scale(1.13);font-size: 14px;font-weight: bold;width: 130.344px;">Se connecter</button>
-                <div></div><small>Vous n'êtes pas encore inscrit ? <a href="./index.php?action=register">S'inscrire</a></small>
+                <div class="mb-3" style="width: 435px;height: -65px;margin: 20px;padding: 0px;"></div><button class="btn btn-primary text-center" name="connexion" type="submit" style="background: rgb(12,36,97);border-radius: 13px;border-color: rgb(12,36,97);margin: 5px;height: 39px;padding: 7px 12px;transform: scale(1.13);font-size: 14px;font-weight: bold;width: 130.344px;">Log in</button>
+                <div></div><small>Create Account <a href="./index.php?action=register">Register</a></small>
             </form>
         </div>
     </section>
