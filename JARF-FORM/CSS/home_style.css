@@ -1,0 +1,109 @@
+html, body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* navbar css */
+
+.home__title {
+    display: flex;
+    margin-left: 1.8rem;
+    font-family: TommyLight, Arial;
+    align-items: baseline;
+    user-select: none;
+}
+
+.home__title:hover::after {
+    content: "© J. Renaud, F. Rivals, R. Mallek, A. Mathiou-Pollak";
+    font-size: 0.7rem;
+    margin-left: 0.6rem;
+    font-family: TommyTHIN, Arial;
+    animation: 1s ease-in-out alternate cop;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 1px 1px 6px rgb(196, 196, 196);
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: TommyLight, Arial;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid rgb(124, 124, 124);
+}
+
+
+/* navbar css responsive */
+
+@media (max-width: 900px) {
+    .header__navbar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 680px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* fonts */
+
+@font-face {
+    font-family: TommyLight;
+    src: url("../fonts/TommyLIGHT.otf");
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: TommyThin;
+    src: url('../fonts/TommyTHIN.otf');
+    font-weight: auto;
+}
+
+/* animations */
+
+@keyframes cop {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
