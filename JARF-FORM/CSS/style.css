@@ -1,0 +1,96 @@
+/* partie général */
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: grey;
+}
+#elem
+{
+    display: flex;
+}
+
+#codehtml
+{
+    display: flex;
+    justify-content: center;
+    padding: 2rem; 
+}
+
+/* partie zone */
+
+.zone
+{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    min-height: 40rem;
+}
+
+.each_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.part
+{
+    padding: 1rem;
+}
+
+.zone div
+{
+    padding: 7px;
+}
+
+.zone .drag:hover
+{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.zone .dropped:hover
+{
+    border: 1px solid red;
+    border-radius: 0.5rem; 
+    margin-left: 10rem;
+}
+
+/* partie items proposés */
+
+#items
+{
+    width: 20%;
+    background-color: white;
+    position: fixed;
+    height: 100vh;
+}
+
+/* partie création formulaire */
+
+#form
+{
+    width: 43%;
+    background-color: white;
+    text-align: center;
+}
+
+#form #drop
+{
+    min-height: 40rem;
+}
+
+
+/* partie code html */
+
+#code
+{
+    display: flex;
+    min-height: 30rem;
+    width: 62%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 1rem;
+}
