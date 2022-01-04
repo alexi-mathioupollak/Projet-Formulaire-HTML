@@ -173,8 +173,8 @@
 
 
     <!-- section code html -->
-    <section id="codehtml">
-        <p id="code">
+    <section id="code">
+        <textarea id="code_generated" placeholder="code HTML..." readonly>
 
-        </p>
+        </textarea>
     </section>

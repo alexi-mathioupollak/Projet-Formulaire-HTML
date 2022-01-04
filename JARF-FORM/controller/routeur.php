@@ -27,10 +27,10 @@ if (!isset($_GET['action'])) {
         if (in_array($action, $allMethodsController)) {
             $controller_class::$action();
         } else {
-            ControllerProduct::error();
+            ControllerUser::error();
         } 
     } else {
-        ControllerProduct::error();
+        ControllerUser::error();
     }
 }
 ?>
