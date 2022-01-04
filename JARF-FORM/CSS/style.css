@@ -4,18 +4,26 @@ html, body {
     margin: 0;
     min-height: 100%;
     min-width: 100%;
-    background-color: grey;
 }
+
 #elem
 {
     display: flex;
+    text-align: center;
+    z-index: 1;
 }
 
-#codehtml
+#code
 {
     display: flex;
     justify-content: center;
-    padding: 2rem; 
+    padding: 2rem;
+    
+}
+
+footer {
+    margin-left: 25%;
+    width: 75%;
 }
 
 /* partie zone */
@@ -23,21 +31,20 @@ html, body {
 .zone
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 90%;
     min-height: 40rem;
 }
 
-.each_items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
 .part
 {
-    padding: 1rem;
+    border: 2px solid #787777;
+    border-radius: 0.5rem;
+}
+
+.part h3 {
+    border-radius: 0.5rem;
+    margin-top: 0;
 }
 
 .zone div
@@ -47,26 +54,28 @@ html, body {
 
 .zone .drag:hover
 {
-    border: 1px solid black;
-    border-radius: 0.5rem;
+    border: 3px solid red;
+    border-radius: 1rem; 
 }
 
 .zone .dropped:hover
 {
-    border: 1px solid red;
-    border-radius: 0.5rem; 
-    margin-left: 10rem;
+    border: 3px solid red;
+    border-radius: 1rem; 
 }
 
 /* partie items proposés */
 
 #items
 {
-    width: 20%;
+    width: 25%;
+    height: 90%;
     background-color: white;
     position: fixed;
-    height: 100vh;
+    margin-top: 6.5rem;
+    box-shadow: 1px 1px 6px rgb(185, 185, 185);
 }
+
 
 /* partie création formulaire */
 
@@ -75,6 +84,9 @@ html, body {
     width: 43%;
     background-color: white;
     text-align: center;
+    margin-left: 50rem;
+    margin-top: 15rem;
+    box-shadow: 1px 1px 6px rgb(185, 185, 185);
 }
 
 #form #drop
@@ -85,12 +97,42 @@ html, body {
 
 /* partie code html */
 
-#code
+#code_generated
 {
     display: flex;
     min-height: 30rem;
     width: 62%;
     background-color: white;
-    border: 3px solid black;
+    border: 2px solid #787777;
     border-radius: 1rem;
+    margin-left: 28rem;
+    box-shadow: 1px 1px 6px rgb(185, 185, 185);
 }
+
+/* polices */
+
+@font-face {
+    font-family: TommyLight;
+    src: url("../fonts/TommyLIGHT.otf");
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: TommyThin;
+    src: url('../fonts/TommyTHIN.otf');
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: TommyMedium;
+    src: url('../fonts/TommyMEDIUM.otf');
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: TommyRegular;
+    src: url('../fonts/TommyREGULAR.otf');
+    font-weight: auto;
+}
+
+

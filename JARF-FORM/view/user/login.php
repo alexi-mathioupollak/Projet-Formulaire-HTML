@@ -86,50 +86,7 @@
 </head>
 
 <body>
-    <section class="full_box_login">
-        <div class="container_form_log">
-            <div class="block-heading">
-                <h2 class="text-info"><strong>Log in</strong></h2>
-            </div>
-            <p><br>Login form</p>
-            <form method="post" class="login_form">
-              <?php
-              if (isset($er_email)){ //si $er_mail n'est pas vide, alors on l'affiche
-              ?>
-                 <div><?= $er_email ?></div>
-              <?php
-                }
-              ?>
-                <div class="mb-3"><label class="form-label" for="email" style="color: white; font-family: TommyTHIN, Arial;"><strong> Email</strong><br></label>
-                  <input class="form-control" type="email" id="email" placeholder=" email" name="email" value="<?php if(isset($email)){ echo htmlentities($email); }?>" required></div>
-                  <?php
-                  if (isset($er_password)){ //si $er_password n'est pas vide, alors on l'affiche
-                  ?>
-                    <div><?= $er_password ?></div>
-                  <?php
-                    }
-                  ?>
-                  <br>
-                <div class="mb-3">
-                  <label class="form-label" for="password">
-                    <strong style="color: white; font-family: TommyTHIN, Arial;">Password</strong>
-                    <br>
-                  </label>
-                  <input class="form-control" type="password" id="password" placeholder="password" name="password">
-                </div>
-                <div class="mb-3">
-                </div>
-                <button class="btn btn-primary text-center" name="connexion" type="submit">Log in</button>
-                <div>
-                </div>
-                <p>Not yet registered?</p>
-                <a href="./index.php?controller=account&action=register">Register</a>
-                <div>
-                </div>
-                <a href="./index.php?controller=account&action=resetpassword">Forgot password ?</a>
-            </form>
-        </div>
-    </section>
+
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
