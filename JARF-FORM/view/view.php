@@ -18,7 +18,8 @@
                 <li><a href="./index.php?controller=generator&action=generator">Générateur</a></li>
                 <li><a href="./index.php">Nous contacter</a></li>
                 <li><a href="./index.php">À propos</a></li>
-                <li><a href="">Mon compte</a></li>
+                <li><a href="./index.php?controller=user&action=login">Mon compte</a></li>
+                <li><a href="./index.php?controller=user&action=register">S'inscrire</a></li>
             </ul>
         </nav>
     </div>
