@@ -2,6 +2,14 @@
 
 require_once File::build_path(array("config", "Conf.php"));
 
+function generateRandomHex() {
+  // Generate a 32 digits hexadecimal number
+  $numbytes = 16; // Because 32 digits hexadecimal = 16 bytes
+  $bytes = openssl_random_pseudo_bytes($numbytes); 
+  $hex   = bin2hex($bytes);
+  return $hex;
+}
+
 
 if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
     header('Location: ../index.php');
@@ -80,18 +88,28 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
  
       //on execute la requete sql si toutes les conditions sont valides
       if($ok){
+        $nonce = generateRandomHex();
+        $options = ['cost' => 12];
+        $password = password_hash($password, PASSWORD_BCRYPT, $options);; //cryptage du password
 
-        $password = crypt($password, '$6$rounds=5000$phpprojet$'); //cryptage du password
-        $token = bin2hex(random_bytes(12));
-
-        $req = Model::getPDO()->prepare("INSERT INTO p__user (username, email, password) VALUES (:username, :email,:password)");
+        $req = Model::getPDO()->prepare("INSERT INTO p__user (username, email, password, nonce) VALUES (:username, :email,:password,:nonce)");
         $req->execute(array(
           'username' => $username, 
           'password' => $password, 
-          'email' => $email)
-        );
+          'email' => $email,
+          'nonce' => $nonce
+        ));
+
+        $mail = "https://webinfo.iutmontp.univ-montp2.fr/~mathioua/projet_form/index.php?controller=user&action=validate&username=$username&nonce=$nonce";
+
+        $header = "From: Hack-King <mallekrayane0@gmail.com>\n";
+        $header .= "MIME-version: 1.0\n";
+        $header .= "Content-type: text/html; charset=utf-8\n";
+        $header .= "Content-Transfer-ncoding: 8bit";
+
+        mail($email, 'Confirmation de compte', $mail, $header);
       
-        header('Location: ./index.php?controller=account&action=login'); //redirection vers la page
+        header('Location: ./index.php?controller=user&action=login'); //redirection vers la page
         exit;
       }
     }
@@ -123,7 +141,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                 <?php
                 if (isset($er_username)){
                 ?>
-                  <div><?= $er_username ?></div>
+                  <div><?= htmlentities($er_username) ?></div>
                 <?php 
                 }
               ?>
@@ -155,7 +173,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                   <input class="form-control" type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" required></div>
 
                 <div class="mb-3"></div><button class="btn btn-primary text-center" type="submit" name="inscription">S'inscrire</button>
-                <div></div><h1 style="font-family: TommyTHIN, Arial; color: white;">You already have an account? <a href="index.php?controller=user&action=login">Login</a></h1>
+                <div></div><h1 style="font-family: TommyTHIN, Arial; color: white;">You already have an account? <a href="index.php?action=login">Login</a></h1>
             </form>
         </div>
     </section>

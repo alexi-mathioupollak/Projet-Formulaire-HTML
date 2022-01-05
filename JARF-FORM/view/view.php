@@ -18,7 +18,13 @@
                 <li><a href="./index.php?controller=generator&action=generator">Générateur</a></li>
                 <li><a href="./index.php">Nous contacter</a></li>
                 <li><a href="./index.php">À propos</a></li>
-                <li><a href="">Mon compte</a></li>
+                <?php if(!isset($_SESSION['id'])) :?>
+                <li><a href="./index.php?controller=user&action=create">Inscription</a></li>
+                <li><a href="./index.php?controller=user&action=login">Connexion</a></li>
+                <?php else: ?>
+                <li><a href="">Mes formulaires</a></li>
+                <li><a href="./index.php?controller=user&action=logout">Déconnexion</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </div>

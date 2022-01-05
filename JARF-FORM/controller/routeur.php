@@ -3,6 +3,7 @@ session_name('projet');
 session_start();
 
 require_once File::build_path(array("controller", "ControllerGenerator.php"));
+require_once File::build_path(array("controller", "ControllerUser.php"));
 
 
 if (!isset($_GET['action'])) {

@@ -126,4 +126,12 @@ class ControllerUser {
 
   }
 
+  public static function error() {
+    $controller = 'user';
+    $view = 'error';
+    $pagetitle = 'Error';
+    require File::build_path(array("view", "view.php"));
+}
+
+
 }

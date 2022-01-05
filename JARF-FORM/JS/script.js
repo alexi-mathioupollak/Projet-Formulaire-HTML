@@ -43,10 +43,11 @@ $(function () {
 });
 
 //personnalisation
-$('.dropped').dblclick(function(){
+$('.dropped').on('click', function(){
+    console.log('test');
     let texte = prompt("Entrer un texte", "Texte");
     $ ( this )
-        .html(texte)
+        .text(texte)
 });
 
 
