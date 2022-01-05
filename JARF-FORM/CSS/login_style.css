@@ -1,0 +1,77 @@
+.full_box_login {
+    display: flex;
+    justify-content: center;
+}
+
+.container_form_log {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: ;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 6px rgb(185 185 185);
+    min-width: 20rem;
+}
+
+.text-info {
+    margin-top: 0;
+    font-size: 3rem;
+    font-family: TommyMedium, Arial;
+    text-align: center;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: black;
+    font-size: 1.2rem;
+    font-family: TommyLight, Arial;
+    margin-bottom: 1px;
+    margin-top: 12px;
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.pwd {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    min-height: 1.4rem;
+    min-width: 20rem;
+}
+
+.btn_text {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-family: TommyRegular, Arial;
+    min-height: 2.5rem;
+}
+
+.under_link_reg {
+    font-size: 1.5rem;
+    font-family: TommyRegular, Arial;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    text-align: center
+}
+
+.reg_btn {
+    text-align: center;
+}
+
+.forg_btn {
+    text-align: center;
+}

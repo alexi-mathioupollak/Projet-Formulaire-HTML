@@ -105,11 +105,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="CSS/register_style.css">
 </head>
 
 <body>
@@ -127,7 +123,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                 <?php 
                 }
               ?>
-                <div class="mb-3"><label class="form-label" for="username" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Username</strong><br></label>
+                <div class="mb-3"><label class="form-label" for="username"><strong>Username</strong><br></label>
                   <input class="form-control item" type="text" id="username" minlength="3" maxlength="40" type="text" placeholder="Username" name="username" value="<?php if(isset($username)){ echo htmlentities($username); }?>" id="username">
 
                   <?php
@@ -137,7 +133,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                     <?php 
                     }
                   ?>
-                  <label class="form-label" for="email" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Email</strong><br></label>
+                  <label class="form-label" for="email"><strong>Email</strong><br></label>
                   <input class="form-control" type="email" placeholder=" email" name="email" value="<?php if(isset($email)){ echo htmlentities($email); }?>" id="email"></div>
                               <?php
                               if (isset($er_password)){
@@ -146,16 +142,16 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                               <?php 
                               }
                             ?>
-                <div class="mb-3"><label class="form-label" for="password" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Password</strong><br></label>
+                <div class="mb-3"><label class="form-label" for="password"><strong>Password</strong><br></label>
 
                   <input class="form-control" type="password" placeholder="Password" name="password" id="password" minlength="6" maxlength="50" required>
 
-                  <label class="form-label" for="password" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Confirm Password</strong><br></label>
+                  <label class="form-label" for="password"><strong>Confirm Password</strong><br></label>
 
                   <input class="form-control" type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" required></div>
 
                 <div class="mb-3"></div><button class="btn btn-primary text-center" type="submit" name="inscription">S'inscrire</button>
-                <div></div><h1 style="font-family: TommyTHIN, Arial; color: white;">You already have an account? <a href="index.php?controller=user&action=login">Login</a></h1>
+                <div></div><h1>You already have an account? <a href="index.php?controller=user&action=login">Login</a></h1>
             </form>
         </div>
     </section>

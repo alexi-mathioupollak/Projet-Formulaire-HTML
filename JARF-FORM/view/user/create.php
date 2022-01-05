@@ -128,15 +128,15 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="CSS/register_style.css">
 </head>
 
 <body>
     <section class="full_box_register">
         <div class="container_form_reg">
             <div class="block-heading">
-                <h2 class="text-info"><strong>Create your Account</strong></h2>
+                <h2 class="text-info"><strong>INSCRIPTION</strong></h2>
             </div>
-            <p>Register<br></p>
             <form method="post" class="register_form">
                 <?php
                 if (isset($er_username)){
@@ -145,7 +145,10 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                 <?php 
                 }
               ?>
-                <div class="mb-3"><label class="form-label" for="username" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Username</strong><br></label>
+                <div class="user__mail">
+                  <label class="label" for="username">
+                    Username
+                  </label>
                   <input class="form-control item" type="text" id="username" minlength="3" maxlength="40" type="text" placeholder="Username" name="username" value="<?php if(isset($username)){ echo htmlentities($username); }?>" id="username">
 
                   <?php
@@ -155,7 +158,9 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                     <?php 
                     }
                   ?>
-                  <label class="form-label" for="email" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Email</strong><br></label>
+                  <label class="label" for="email">
+                    Email
+                  </label>
                   <input class="form-control" type="email" placeholder=" email" name="email" value="<?php if(isset($email)){ echo htmlentities($email); }?>" id="email"></div>
                               <?php
                               if (isset($er_password)){
@@ -164,16 +169,25 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
                               <?php 
                               }
                             ?>
-                <div class="mb-3"><label class="form-label" for="password" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Password</strong><br></label>
+                <div class="pwd__conf">
+                  <label class="label" for="password">
+                    Password
+                  </label>
 
                   <input class="form-control" type="password" placeholder="Password" name="password" id="password" minlength="6" maxlength="50" required>
 
-                  <label class="form-label" for="password" style="color: white; font-family: TommyTHIN, Arial; margin-bottom: 0; margin-top: 1rem;"><strong>Confirm Password</strong><br></label>
+                  <label class="label" for="password">Confirm Password</label>
 
                   <input class="form-control" type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" required></div>
 
-                <div class="mb-3"></div><button class="btn btn-primary text-center" type="submit" name="inscription">S'inscrire</button>
-                <div></div><h1 style="font-family: TommyTHIN, Arial; color: white;">You already have an account? <a href="index.php?action=login">Login</a></h1>
+                <div class="mb-3">
+
+                </div>
+                  <button class="btn_text" type="submit" name="inscription">S'inscrire</button>
+                <div>
+
+                </div>
+                <h1>Vous êtes déjà inscrit ? <a href="index.php?controller=user&action=login">Se connecter</a></h1>
             </form>
         </div>
     </section>
