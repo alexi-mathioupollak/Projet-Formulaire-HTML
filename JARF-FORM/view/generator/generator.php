@@ -9,7 +9,7 @@
         <!-- drag & drop section -->
         <div class="zone">
             <!-- drag section -->
-            <section class="part" id="items">
+            <section class="part trash" id="items">
                 <h3>Texte</h3>
                 <div>
                     <div class="drag">
@@ -173,8 +173,5 @@
 
 
     <!-- section code html -->
-    <section id="code">
-        <textarea id="code_generated" placeholder="code HTML..." readonly>
-
-        </textarea>
-    </section>
+    <textarea id="code_generated" style="margin-left: 400px;">
+</textarea>
