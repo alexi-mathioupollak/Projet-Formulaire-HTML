@@ -9,7 +9,7 @@
         <!-- drag & drop section -->
         <div class="zone">
             <!-- drag section -->
-            <section class="part" id="items">
+            <section class="part trash" id="items">
                 <h3>Texte</h3>
                 <div>
                     <div class="drag">
@@ -165,6 +165,14 @@
             <!-- drop section  -->
             <form class="part" id="form">
                 <div id="drop">
+
+                <?php
+                if (isset($_GET['idForm'])) {
+                    $idForm = (int)$_GET['idForm'];
+                    $f = ModelGenerator::getFormById($idForm);
+                    echo $f->getContenu(); 
+                }
+                  ?>            
                 </div>
             </form>
 
@@ -173,8 +181,16 @@
 
 
     <!-- section code html -->
-    <section id="code">
-        <textarea id="code_generated" placeholder="code HTML..." readonly>
-
-        </textarea>
-    </section>
+    <form method="post" action='index.php?controller=generator&action=save'>
+      <textarea id="code_generated" name="content" style="margin-left: 400px;" readonly>
+               <?php
+                if (isset($_GET['idForm'])) {
+                    $idForm = (int)$_GET['idForm'];
+                    $f = ModelGenerator::getFormById($idForm);
+                    echo $f->getContenu(); 
+                }
+                  ?>  
+      </textarea>
+      <input style="margin-left: 500px;" type="submit" value="Enregistrer" />
+    </form>
+</textarea>

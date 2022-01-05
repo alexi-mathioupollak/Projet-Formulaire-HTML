@@ -1,28 +1,3 @@
-// select the target node
-var target = document.getElementById('drop')
-// create an observer instance
-var observer = new MutationObserver(function(mutations) {
-    console.log($('mydiv').text());
-});
-// configuration of the observer:
-var config = { attributes: true, childList: true, characterData: true };
-
-const callback = function(mutationsList, observer) {
-    for(const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-        }
-        else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
-        }
-    }
-};
-// pass in the target node, as well as the observer options
-observer.observe(target, config);
-
-// $('button').click(function(){
-//     $('body').css("background-color", "red");
-// })
 $(function () {
     $("#items").accordion({
         heightStyle: "content"
@@ -38,6 +13,13 @@ $(function () {
         revert: 'invalid'
     });
 
+    $('.trash').droppable({
+        accept: ".dropped",
+        drop: function(event, ui) {
+            ui.draggable.remove();
+        }
+    });
+
     $("#drop").droppable({
         accept: ".drag",
 
@@ -48,7 +30,6 @@ $(function () {
                     .addClass('dropped')
                     .removeClass("drag ui-draggable ui-draggable-handle ui-draggable-dragging")
                 );
-            //$("#code_generated").val($("#drop").html())
         }
     });
 });
@@ -62,10 +43,11 @@ $(function () {
 });
 
 //personnalisation
-$('#dropped').dblclick(function(){
+$('.dropped').on('click', function(){
+    console.log('test');
     let texte = prompt("Entrer un texte", "Texte");
     $ ( this )
-        .html(texte)
+        .text(texte)
 });
 
 
@@ -75,6 +57,8 @@ $('#dropped').dblclick(function(){
 $('#drop').bind('DOMNodeInserted DOMNodeRemoved', function() {
     $("#code_generated").val($("#drop").html())
 });
+
+
 
 
 /*

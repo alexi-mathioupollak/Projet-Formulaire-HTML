@@ -1,6 +1,6 @@
 <?php
 
-    require_once './config/Conf.php';
+require_once File::build_path(array("config", "Conf.php"));
 
   if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
     header('Location: ./index.php');
@@ -78,15 +78,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Log in</title>
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="./assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="CSS/login_style.css">
 </head>
 
 <body>
-
+    <section class="full_box_login">
+        <div class="container_form_log">
+            <div class="block-heading">
+                <h2 class="text-info">CONNEXION</h2>
+            </div>
+            <form method="post" class="login_form">
+              <?php
+              if (isset($er_email)){ //si $er_mail n'est pas vide, alors on l'affiche
+              ?>
+                 <div><?= $er_email ?></div>
+              <?php
+                }
+              ?>
+                <div class="mail"><label class="label" for="email">Email</label>
+                  <input class="form-control" type="email" id="email" placeholder="email" name="email" value="<?php if(isset($email)){ echo htmlentities($email); }?>" required></div>
+                  <?php
+                  if (isset($er_password)){ //si $er_password n'est pas vide, alors on l'affiche
+                  ?>
+                    <div><?= $er_password ?></div>
+                  <?php
+                    }
+                  ?>
+                  <br>
+                <div class="pwd">
+                  <label class="label" for="password">
+                    Password
+                  
+                  </label>
+                  <input class="form-control" type="password" id="password" placeholder="password" name="password">
+                </div>
+                <div class="mb-3">
+                </div>
+                <button class="btn_text" name="connexion" type="submit">Log in</button>
+                <div>
+                </div>
+                <p class="under_link_reg">Pas encore inscrit ?</p>
+                <a href="./index.php?controller=user&action=create" class="reg_btn">S'inscrire</a>
+                <div>
+                </div>
+                <a href="./index.php?controller=user&action=resetpassword" class="forg_btn">Mot de passe oublié ?</a>
+            </form>
+        </div>
+    </section>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
