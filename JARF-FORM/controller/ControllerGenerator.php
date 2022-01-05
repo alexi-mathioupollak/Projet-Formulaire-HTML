@@ -16,5 +16,13 @@ class ControllerGenerator {
         require File::build_path(array("view", "view.php"));
     }
 
+    public static function save() {
+        ModelGenerator::save($_SESSION['id'], $_POST['content']);
+    }
+
+    public static function readAllForms() {
+
+    }
+
 }
 ?>

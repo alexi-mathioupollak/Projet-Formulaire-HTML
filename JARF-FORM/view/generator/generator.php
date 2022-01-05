@@ -173,5 +173,8 @@
 
 
     <!-- section code html -->
-    <textarea id="code_generated" style="margin-left: 400px;">
+    <form method="post" action='index.php?controller=generator&action=save'>
+      <textarea id="code_generated" name="content" style="margin-left: 400px;" readonly></textarea>
+      <input style="margin-left: 500px;" type="submit" value="Enregistrer" />
+    </form>
 </textarea>
