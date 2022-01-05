@@ -191,6 +191,10 @@
                 }
                   ?>  
       </textarea>
+      <?php if (isset($_SESSION['id'])): ?>
       <input style="margin-left: 500px;" type="submit" value="Enregistrer" />
+      <?php else: ?>
+      <a style="margin-left: 500px;" href="./index.php?controller=user&action=login">Connectez-vous pour enregistrer vos formulaires</a>
+      <?php endif; ?>
     </form>
 </textarea>

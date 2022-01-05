@@ -38,10 +38,6 @@
 
 <footer>
     <p>© J. Renaud, F. Rivals, R. Mallek, A. Mathiou-Pollak</p>
-    <ul>
-        <li><a href="">test</a></li>
-        <li><a href="">test</a></li>
-    </ul>
 </footer>
 
 
