@@ -35,7 +35,10 @@ $(function () {
 //(emplacement)
 $(function () {
     $("#drop").sortable({
-        cancel: false
+        cancel: false,
+        stop:function(e, ui){
+            alert("modif");
+        }
     });
 });
 
@@ -48,7 +51,9 @@ $('#dropped').dblclick(function(){
 
 
 //génération de code html
-
+$("#form").on('change',function(){ 
+    alert("toto");
+});
  
 /*$("#form").on('change', '#drop',function(){
     //$('#code').html($('#drop').html());
