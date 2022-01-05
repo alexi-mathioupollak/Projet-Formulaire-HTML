@@ -3,13 +3,13 @@ session_name('projet');
 session_start();
 
 require_once File::build_path(array("controller", "ControllerGenerator.php"));
-
+require_once File::build_path(array("controller", "ControllerUser.php"));
 
 if (!isset($_GET['action'])) {
     $controller = 'accueil';
     $view = 'home';
     $pagetitle = 'Accueil';
-    require File::build_path(array("view", "view.php"));   
+    require File::build_path(array("view", "view.php"));
 } else {
         $action = $_GET['action'];
 
@@ -28,7 +28,7 @@ if (!isset($_GET['action'])) {
             $controller_class::$action();
         } else {
             ControllerUser::error();
-        } 
+        }
     } else {
         ControllerUser::error();
     }
