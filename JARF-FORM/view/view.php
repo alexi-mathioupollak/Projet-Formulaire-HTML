@@ -22,7 +22,7 @@
                 <li><a href="./index.php?controller=user&action=create">Inscription</a></li>
                 <li><a href="./index.php?controller=user&action=login">Connexion</a></li>
                 <?php else: ?>
-                <li><a href="">Mes formulaires</a></li>
+                <li><a href="./index.php?controller=generator&action=readAllForms">Mes formulaires</a></li>
                 <li><a href="./index.php?controller=user&action=logout">Déconnexion</a></li>
                 <?php endif; ?>
             </ul>

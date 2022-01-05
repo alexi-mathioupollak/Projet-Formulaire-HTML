@@ -102,7 +102,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
 
         $mail = "https://webinfo.iutmontp.univ-montp2.fr/~mathioua/projet_form/index.php?controller=user&action=validate&username=$username&nonce=$nonce";
 
-        $header = "From: Hack-King <mallekrayane0@gmail.com>\n";
+        $header = "From: GenForm v2 <mallekrayane0@gmail.com>\n";
         $header .= "MIME-version: 1.0\n";
         $header .= "Content-type: text/html; charset=utf-8\n";
         $header .= "Content-Transfer-ncoding: 8bit";
